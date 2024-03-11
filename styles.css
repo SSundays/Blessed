@@ -72,6 +72,10 @@ body {
     height: 100%;
 }
 
+#menu-icon{
+    display: none;
+}
+
 /* the navbar link styles */
 .navbar a {
     font-size: 1.8rem;
@@ -673,12 +677,53 @@ span{
         margin-bottom: 3rem;
     }
 
-    .experience h2{
+    .my-projects h2{
         margin-bottom: 3rem;
     }
 
-    .experience-box{
+    .my-projects-links{
         grid-template-columns: repeat(1,1fr);
     }
 
+    /* Mobile Styles */
+@media (max-width: 895px) {
+    .experience h2 {
+        margin-bottom: 3rem;
+    }
+
+    .experience-link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        background-color: var(--main-color);
+        color: #4d3624;
+        height: auto; /* Adjusted to auto height for mobile */
+        border-radius: 3rem;
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+        margin-bottom: 2rem;
+    }
+
+    .experience-box:hover {
+        background: #4d3624;
+        color: var(--main-color);
+        transform: scale(1.02);
+        transition: 0.3s ease-in-out; /* Corrected the transition property */
+    }
+
+    .experience-box .experience-info {
+        padding: 2rem; /* Adjusted padding for mobile */
+    }
+
+    .experience-info h4 {
+        font-size: 2rem; /* Adjusted font size for mobile */
+        margin-bottom: 0.5rem; /* Adjusted margin for mobile */
+    }
+
+    .experience-info p {
+        font-size: 1.4rem; /* Adjusted font size for mobile */
+        max-height: none; /* Removed max height for mobile */
+    }
+}
 }
